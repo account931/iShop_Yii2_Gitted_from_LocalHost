@@ -1,0 +1,127 @@
+/* product name in small single modal box */
+#productName, #productPrice {
+   color:red;
+   font-size:1.2em;
+   font-weight: bold;
+ }
+ 
+ /* text color in left full page with full cart list */
+ #fullCartList, #totalSumCartFull, .sidenav p {
+	 color:white;
+ }
+
+ .zzz{border:1px solid white; padding:10px; width:30%;margin:0 auto;}
+ 
+ /* ---------------------------------------- Mobile */
+@media screen and (max-width: 480px) { 
+    .zzz{ width:80%;}
+}
+ /* ----------------------------------- END  Mobile */
+ 
+ 
+ 
+ /* Small Confirm modal box, when u click on "Add to Cart button" */
+.modal-contentZ p {
+	margin: 0, auto;
+	font-weight: bold;
+	text-align: center;
+	background:#99e699;
+	padding:0.2em;
+	border-radius: 25px;
+}	
+
+.modalConf {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	border-radius:20px;
+}
+
+/* Modal Content */
+.modal-contentZ {
+    background-color: white/*#fefefe*/;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.closeConfirm {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeConfirm:hover,
+.closeConfirm:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/*------------------ END Small Confirm modal box, when u click on "Add to Cart button" -------------------------*/
+
+
+
+/*  small icons on main page in product list */
+.prod-img {
+	width: 5%;
+	margin-left:0.1em;
+	margin-right:0.8em;
+}
+
+
+
+/*  Product image icons on main page in product list */
+.packaging {
+	width: 20%;
+    margin-top:0.8em;
+	//margin-left:45%; 
+}
+
+.textX {
+	margin-top:2em;
+}
+
+/*  ----------------Mobile */
+@media screen and (max-width: 460px) {  
+  .prod-img {
+	width: 5%;
+	margin-left:0.1em;
+	margin-right:0.2em;
+  } 
+  
+  .packaging {
+	width: 12%;
+    margin-top:0.2em;
+	//margin-left:45%; 
+  }
+  .textX {
+	margin-top:0.2em;
+  }
+}
+/*  ---------------- END Mobile */
+
+
+
+
+
+/* Image Added, when u add a single item to cart */
+#addedImage{width:10%;}
+/*  ----------------Mobile */
+@media screen and (max-width: 460px) {  
+  #addedImage{width: 30%;}
+}
+/*  ---------------- END Mobile */

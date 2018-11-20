@@ -1,0 +1,60 @@
+/* animation */
+.rotateX {
+  -webkit-transition: -webkit-transform 1.8s ease-in-out;
+          transition:         transform 1.8s ease-in-out;
+}
+.rotateX:hover {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+		  
+}
+
+
+
+/* Class for a div for every single placed order in views/product/placed.php */
+.placed {
+	border: 1px solid black;
+	padding: 20px;
+	
+}
+
+
+.underline {
+ text-decoration: underline;
+}
+
+
+
+/* Preloader, loctaed in views/llayout/main */
+#overlay {
+	position:absolute;
+	top:18%;
+	left:40%;
+	width:97%;
+}
+
+@media screen and (max-width: 460px) {   
+  #overlay {
+	position:absolute;
+	top:20%;
+	left:15%;
+	width:720%;
+  }
+}
+
+/* Preloader, loctaed in views/llayout/main */
+
+
+
+.logout-mine:hover{font-color:yellow; }
+
+
+.smallText{font-size:6px;}
+
+/* Search input */
+#searchProduct{color:black;}
+
+
+/* Fixing z-index overlay for autocomplete */
+.ui-autocomplete { position: absolute; cursor: default;z-index:999930 !important;}
+/* .ui-front { z-index: 9999; } */
