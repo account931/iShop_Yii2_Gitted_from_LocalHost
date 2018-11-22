@@ -1,6 +1,7 @@
-#emulates Inet shop logic (adding products to cart, plus/minus, cart calculation). 
+#Emulates Inet shop logic (adding products to cart, plus/minus, cart calculation). 
 #So far contains, JS only. Should add a generation the page by PHP SQL means (retrieving content for current shop from SQL). 
 #\
+
 
 How it works:
 1. In html each product has a specific ID, which contain prodoct name + price (i.e id="Dnb-12.55");
