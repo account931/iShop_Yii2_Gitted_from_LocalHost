@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title); 
 	echo "<br>";
-	echo Html::img(Yii::$app->getUrlManager()->getBaseUrl().'/images/cog.png' , $options =["id"=>"","marginleft"=>"4%","class"=>"rotateX","width"=>"7%","alt"=>"click","title"=>"rotate cog"] );
+	echo Html::img(Yii::$app->getUrlManager()->getBaseUrl().'/images/cog.png' , $options =["id"=>"","marginleft"=>"4%","class"=>"rotateX cog","width"=>"7%","alt"=>"click","title"=>"rotate cog"] );
     ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
@@ -82,7 +82,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <br><!--<br><br>-->
 <!--<h2>Animated Sidenav Example Full Width</h2>-->
 <!--<p>Click on the element below to open the navigation menu.</p>-->
-<span style="font-size:30px;cursor:pointer" id="openSidePagewithCart" onclick="openNav()">&#9776; open Cart <img style="width:2%;" src="images/product_icon.png"/></span>
+<span style="font-size:30px;cursor:pointer" id="openSidePagewithCart" onclick="openNav()">&#9776; open Cart <img class="cart-img" style="width:3%;" src="images/product_icon.png"/></span>
 
 <script>
 function openNav() {
@@ -219,10 +219,11 @@ function closeNav() {
 	    //echo Html::encode(" Start Shopping");
 		echo "<br><br>";
 	?>
-	<div class="list-group">
+	<div class="list-group" id="productDisplayArea">
 	
 	<?php
 	    // Logic is in models/products.php
+		//Display all products from SQL
 		Products::displayProducts();
 	?>
      </div>

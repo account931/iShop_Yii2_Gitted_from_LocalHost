@@ -37,6 +37,10 @@ window.productsObject;
 $(document).ready(function(){
 	
 	
+	//In mobile version we change menu order, we put "Search" field on the top in order it not to be hidden by pop-up keyboard
+	change_MenuOrder_in_Mobile();
+	
+	
 	
 	
 	// Click + button*************
@@ -331,7 +335,7 @@ $(document).ready(function(){
         var finalText = "<div class='container' style='word-wrap: break-word;'>";  // word-wrap: break-word to prevent text overlapping
 		finalText +=  "<div class='row smallText'>" +
 						"<div class='col-sm-4 col-xs-3'> Product</div> " +
-						"<div class='col-sm-2 col-xs-1'> Pcs</div> " +
+						"<div class='col-sm-2 col-xs-1'> P</div> " +
 						
 						"<div class='col-sm-1 col-xs-2'></div>" +  //+button
 						"<div class='col-sm-1 col-xs-2'></div>" + //-button
@@ -487,4 +491,88 @@ $(document).ready(function(){
     // **************************************************************************************
     // **************************************************************************************
 	
+	
+	
+	
+	// onFocus in custom form (VertRows, HorizColumn) in  mobile version scroll the page to input
+	/*
+	$( "#searchProduct" ).focus(function() {
+        if(screen.width <= 640){ //alert("focus");
+		    $("#myTopnav a:last-child").css("margin-bottom", "200px");
+		
+	        scrollResults("#searchProduct"); //scroll the page down to currencies results  //#currencyResult
+	    }
+    });
+	*/
+	
+	
+	
+	 //In mobile version we change menu order, we put "Search" field on the top in order it not to be hidden by pop-up keyboard
+	// **************************************************************************************
+    // **************************************************************************************
+    //                                                                                     ** 
+	 function change_MenuOrder_in_Mobile()
+	 {
+	     if(screen.width <= 640){ 
+		     //var tests = $('#myTopnav');
+             //tests.first().insertAfter(tests.last()); 
+		     $("#searchX").insertBefore($("#pcControl"));    
+	     }
+	 }
+	// **                                                                                  **
+    // **************************************************************************************
+    // **************************************************************************************
+	
+	
+	
+	
+	
+	
+	
+	
+	//=============================== DONOR =======================================================================
+	   
+	 // Scroll the page to results  #resultFinal
+	// **************************************************************************************
+    // **************************************************************************************
+    //                                                                                     ** 
+	function scrollResults(divName, parent)  //arg(DivID, levels to go up from DivID)
+	{   //if 2nd arg is not provided while calling the function with one arg
+		if (typeof(parent)==='undefined') {
+		
+            $('html, body').animate({
+                scrollTop: $(divName).offset().top
+                //scrollTop: $('.your-class').offset().top
+             }, 'slow'); 
+		     // END Scroll the page to results
+		} else {
+			//if 2nd argument is provided
+			var stringX = "$(divName)" + parent + "offset().top";  //i.e constructs -> $("#divID").parent().parent().offset().top
+			$('html, body').animate({
+                scrollTop: eval(stringX)         //eval is must-have, crashes without it
+                }, 'slow'); 
+		}
+	}
+	
+	// **                                                                                  **
+    // **************************************************************************************
+    // **************************************************************************************
+	
+	
+	
+	
+	
+	
+	 // **************************************************************************************
+    // **************************************************************************************
+    //                                                                                     ** 
+	
+	
+	function scroll_toTop() 
+	{
+	    $("html, body").animate({ scrollTop: 0 }, "slow");	
+	}
+	// **                                                                                  **
+    // **************************************************************************************
+    // **************************************************************************************
 	

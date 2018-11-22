@@ -40,21 +40,25 @@
 	left:15%;
 	width:720%;
   }
+  .cog {width: 18%;}
+  .cart-img {width: 48%;}
 }
-
-/* Preloader, loctaed in views/llayout/main */
-
+/* Preloader, located in views/layout/main */
 
 
-.logout-mine:hover{font-color:yellow; }
+
+.logout-mine:hover{font-color:yellow;}
 
 
 .smallText{font-size:6px;}
 
-/* Search input */
-#searchProduct{color:black;}
+/* Search input, Search button color */
+#searchProduct, #searchX button {color: black;}
 
 
-/* Fixing z-index overlay for autocomplete */
+/* Fixing z-index overlay overlap for autocomplete (autocomplete hints were hidden by header bar) */
 .ui-autocomplete { position: absolute; cursor: default;z-index:999930 !important;}
 /* .ui-front { z-index: 9999; } */
+
+
+.ajax-error{color:red; padding:3em; border:1px solid red;}

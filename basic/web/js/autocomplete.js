@@ -17,7 +17,7 @@ $(document).ready(function(){
 		arrayAutocomplete.push(calenderEvents[key]['pr_name']); //gets name of everty product
 	}
 	
-	alert(arrayAutocomplete);
+	alert("Autocomplete SQL values -> " + arrayAutocomplete);
 	
     //Autocomplete itself
     $( function() {

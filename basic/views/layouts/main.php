@@ -124,7 +124,7 @@ AppAsset::register($this); // register main Asset
 	    <div class="topnav" id="myTopnav">
 			<?= Html::a( "Home", ['/site/index', 'period' => "",   ] /* $url = null*/, $options = ['class'=>'activeZ', 'id'=>'home', 'title' => 'Go home',] ) ?>
             <!--<a href="#home" class="active" id="home">Home</a>-->
-			<?= Html::a( "PControl", ['/products/index', 'period' => "",   ] /* $url = null*/, $options = ['class'=>'check', 'title' => 'Access to all DB',   ] ) ?>
+			<?= Html::a( "PControl", ['/products/index', 'period' => "",   ] /* $url = null*/, $options = ['class'=>'check', 'id'=>'pcControl', 'title' => 'Access to all DB',   ] ) ?>
 			<? //Html::a( "About", ['/site/about', 'period' => "",   ] /* $url = null*/, $options = ['class'=>'check', 'title' => 'About us',] ) ?>
 			<? //Html::a( "Contact", ['/site/contact', 'period' => "",   ] /* $url = null*/, $options = ['class'=>'check', 'title' => 'Contact us',] ) ?>
 		    <?= Html::a( "Shop", ['/products/shop'] /* $url = null*/, $options = ['class'=>'check', 'title' => 'Shop',] ) ?>
@@ -185,13 +185,15 @@ AppAsset::register($this); // register main Asset
 			?>
 
 	  
-	        <!---Search input--->
-	        <a href="#" class="menuForm">
+	        <!--- Search input --->
+			<!-- In mobile version we change menu order, we put "Search" field on the top in order it not to be hidden by pop-up keyboard -->
+	        <a href="#" class="menuForm" id="searchX">
 	            <input type="text" class="" placeholder="Search" name="search" id="searchProduct">
-                <button class="" type="submit">
+                <button class="" type="submit" id="<?php echo Yii::$app->request->baseUrl. "/index.php?r=products/get_single_ajax_product";?> ">    
                     <i class="glyphicon glyphicon-search"></i>
                 </button>
 	        </a>
+			<!--- END Search input --->
 	  
 	    <!--Mine BASKET -->
 	    <a href="#aboutZ" style="float: right;>
@@ -201,7 +203,7 @@ AppAsset::register($this); // register main Asset
 	    <!-- End mine Basket-->
 	
 	    <!-- Must be the last element in menu, that is the invisible in desktop icon-->
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a> 
         </div>
 
         <script>

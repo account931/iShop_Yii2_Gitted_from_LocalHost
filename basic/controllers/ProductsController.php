@@ -471,6 +471,98 @@ class ProductsController extends Controller
 
 
 
+	
+	
+	
+	
+	
+	
+	
+	
+	// Gets Ajax data from User check out order(checkout.php) //gets ajax with Orders object, Unique order number, User address, mobile, 
+	//and echo the Php Json data to be dispalyed back in checkout.php with JS
+
+	// **************************************************************************************
+    // **************************************************************************************
+    //                                                                                     **
+	
+	public function actionGet_single_ajax_product()
+    {
+		
+		//$searchValue = $_POST['serverSearchValue'];
+		
+		 
+		
+		
+	    // check if received Ajax and POST request	from checkout.php
+        $dataZ = Yii::$app->request->post();
+            if (isset($dataZ)) {
+			
+                if (Yii::$app->request->isAjax) { 
+				    $test = "Ajax Worked, recognized!";
+				} else {
+                    $test = "Ajax Worked, not recognized!";
+				}
+            } else {
+                $test = "Ajax failed 100%";
+            }
+
+		   // Get variables with data from JS ajax request from js/search_ajax.js
+		   $searchValue =  Yii::$app->request->post('serverSearchValue'); //test name
+		   
+		   
+		   
+		   
+		  // Specify what data to echo with JSON, ajax usese this JSOn data to form the answer and html() it, it appears in JS consol.log(res)
+         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;  
+          return [
+             'result_status' => $test, // return ajx status
+             'code' => 100,
+		     'search_value' => $searchValue,         // test name 
+			 //'controller' => $controller,   // current controller
+			 //'userformData' => $userName,   // current name
+			 //'userCell' => $userCell,       // cell
+			 //'userAddr' => $userAddr,       // address
+			 //'orderNumber' => $orderNumber, // unique Order number, generated in checkout.php in JS generateUUID()
+			 //'allOrders' => $allOrders, // unique Order number, generated in checkout.php in JS generateUUID
+			 //'totalSum' => Yii::$app->request->post('orderTotalSum'), // unique Order number, generated in checkout.php in JS generateUUID
+			 //'sql_status_buyers' => $_SESSION['status'], // status for saving to Buyers DB, defined in save_to_Buyers_DB()
+			 //'sql_status_orders' => $_SESSION['status_orders'], // status for saving to Orders DB, defined in save_to_Orders_DB()
+			    
+          ]; 
+		
+		
+		
+
+	        /*
+		    return $this->render('ajax', [
+               //'searchModel' => $searchModel, //is in model
+			   'ress' => $search , //is in model
+			   'arrayDecoded' => $arrayDecoded , //is in model
+        ]);
+		*/
+		
+    }
+	// **                                                                                  **
+    // **************************************************************************************
+    // **************************************************************************************  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
 	
