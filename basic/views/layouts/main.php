@@ -207,6 +207,7 @@ AppAsset::register($this); // register main Asset
         </div>
 
         <script>
+		//JS Logic for responsive menu
         function myFunction() {
             var x = document.getElementById("myTopnav");
             if (x.className === "topnav") {

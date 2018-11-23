@@ -507,7 +507,9 @@ $(document).ready(function(){
 	
 	
 	
-	 //In mobile version we change menu order, we put "Search" field on the top in order it not to be hidden by pop-up keyboard
+	
+	
+	//In mobile version we change menu order, we put "Search" field on the top in order it not to be hidden by pop-up keyboard
 	// **************************************************************************************
     // **************************************************************************************
     //                                                                                     ** 

@@ -85,6 +85,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <span style="font-size:30px;cursor:pointer" id="openSidePagewithCart" onclick="openNav()">&#9776; open Cart <img class="cart-img" style="width:3%;" src="images/product_icon.png"/></span>
 
 <script>
+//opens side bar with all products cart
 function openNav() {
     document.getElementById("mySidenav").style.width = "100%";
 }

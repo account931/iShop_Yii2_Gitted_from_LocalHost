@@ -34,6 +34,10 @@ $(document).ready(function(){
 			return false;
 		}
 		
+		
+		//hides responsive menu in mobile after the click(main js logic of responsive menu is in view/layout/main.php)
+		document.getElementById("myTopnav").className = "topnav";  
+		
 		$.ajax({
             url: urlX,
             type: 'POST',
