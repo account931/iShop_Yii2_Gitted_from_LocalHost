@@ -1,0 +1,35 @@
+
+
+/* .my-drop:hover .dropdown-content-my {display: block;} */ 
+
+.dropdown-z{position: relative;}
+
+.dropdown-content-my {
+    display: none;
+    position: absolute;
+	top: 4em; right:35%;
+    background-color: #f1f1f1; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	overflow: auto;
+}
+
+
+.dropdown-content-my a {
+	color: red !important;
+    padding: 0px 16px !important;
+    text-decoration: none;
+    display: block !important;
+}
+
+
+
+/*
+* {
+   color:red !important;
+}
+*/
+
+
+

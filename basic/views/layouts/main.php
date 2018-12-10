@@ -72,7 +72,7 @@ AppAsset::register($this); // register main Asset
   display: none;
 }
 
-@media screen and (max-width: 600px) {  /* was 600 */
+@media screen and (max-width: 992px) {  /* was 600 */
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -80,7 +80,7 @@ AppAsset::register($this); // register main Asset
   }
 }
 
-@media screen and (max-width: 600px) {  /* was 600 */
+@media screen and (max-width: 992px) {  /* was 600 */
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -130,7 +130,8 @@ AppAsset::register($this); // register main Asset
 		    <?= Html::a( "Shop", ['/products/shop'] /* $url = null*/, $options = ['class'=>'check', 'title' => 'Shop',] ) ?>
 			<?= Html::a( "Cart", ['/products/shop', 'period' => "open-cart",   ] /* $url = null*/, $options = ['class'=>'check', 'title' => 'Shop with openrd cart',] ) ?>
 			<?= Html::a( "CheckOut", ['/products/checkout', 'period' => "",   ] /* $url = null*/, $options = ['class'=>'check', 'title' => 'Shop',] ) ?>
-            <?= Html::a( "Placed", ['/products/placed', 'period' => "",   ] /* $url = null*/, $options = ['class'=>'check', 'title' => 'Non proccessed all Server Orders',] ) ?>
+            <?= Html::a( "Placed", ['/products/placed', 'period' => "",   ] /* $url = null*/, $options = ['class'=>'check', 'title' => 'Not proccessed all Server Orders',] ) ?>
+			
 			
 			<?php 
 			//Makes this link visible for Logged users only - users purchases history
@@ -145,6 +146,31 @@ AppAsset::register($this); // register main Asset
 			<?= Html::a( "Ord.DB", ['/orders/index', 'period' => "",   ] /* $url = null*/, $options = ['class'=>'check', 'title' => 'Orders DB',] ) ?>
 			
 			
+			
+			<!---- Creates dropdown BootSrap -->
+           <a class="dropdown-toggle" data-toggle="dropdown">DropBS <span class="caret"></span></a>
+           <ul class="dropdown-menu connected" style="top:4em;right: 42%; left: auto;" > <!-- style="top:4em;right: 42%; left: auto;" -->
+             <li><a href="#">HTML</a></li>
+             <li><a href="#">CSS</a></li>
+             <li><a href="#">JavaScript</a></li>
+           </ul>
+        
+			<!---- END Creates dropdown BootSrap  -->
+			
+			
+			
+			
+			<!---- Creates MY dropdown -->
+			<div class="dropdown-z">
+			    <a class="my-drop">Drop <span class="caret"></span></a>
+			    <div class="dropdown-content-my">
+                  <a href="#">Link 1</a>
+                  <br><a href="#">Link 2</a>
+                  <br><a href="#">Link 3</a>
+                </div>
+			 </div>
+             <!---- Creates dropdown  -->
+  
 			
 			
 			<!-----DropDown Yii2 Widget, SO FAR DEACTIVATED------>

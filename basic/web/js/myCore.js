@@ -515,7 +515,7 @@ $(document).ready(function(){
     //                                                                                     ** 
 	 function change_MenuOrder_in_Mobile()
 	 {
-	     if(screen.width <= 640){ 
+	     if(screen.width <= 992){  //640
 		     //var tests = $('#myTopnav');
              //tests.first().insertAfter(tests.last()); 
 		     $("#searchX").insertBefore($("#pcControl"));    

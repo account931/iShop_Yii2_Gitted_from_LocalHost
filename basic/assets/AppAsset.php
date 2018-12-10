@@ -26,6 +26,7 @@ class AppAsset extends AssetBundle
 		'css/sideNavFullScreenMenu.css', //ishop
 		'css/yii2_mine.css', //yii2 mine
 		'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',  //fa fa lib
+		'css/dropdown.css',  //css for menu dropdown
 		
     ];
     public $js = [
@@ -33,6 +34,7 @@ class AppAsset extends AssetBundle
 		//'js/myCore.js',  //ishop   -> moved to asserts/ishopAssertOnly.php
 		'js/main_layout.js',   //js for views/layout/main.php
 		'js/search_ajax.js',  //js for Search button in header bar
+		'js/dropdown.js',  //js for dropdown
 	
     ];
     public $depends = [

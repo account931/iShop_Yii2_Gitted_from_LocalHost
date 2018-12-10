@@ -129,7 +129,7 @@ function closeNav() {
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
+  <div class="modal-content">     <!-- modal-content -->
     <div class="modal-header">
       <span class="close">&times;</span>
       <h2>Product Header</h2>
@@ -138,34 +138,34 @@ function closeNav() {
     <div class="modal-body">
 	  <!--<div class="container ff"> -->  <!-- for bootstrap-->
 	  
-	  <div class="row row1"> <!--Bstrap inj-->
+	  <div class="row row1"> <!--Bstrap inj-->  
 	  
-        <div class="col-sm-5"> 
+        <div class="col-sm-5 col-xs-12"> 
           <p>Product Name: &nbsp; <span id="productName" class="prName"></span> </p>
           <p>Some other text...</p> <br><br>
            <p><img src="images/cart.png" style="width:10%;"/></p>
           <!--<p>Some other text...</p>	-->	  
 	    </div>
 		
-        <div class="col-sm-3">
+        <div class="col-sm-3 col-xs-12">
 	      <p>Price:<span id="productPrice"></span> </p>
 	    </div>
 		
-		<div class="col-sm-2">
+		<div class="col-sm-2 col-xs-12 ">
 	      <p>Pcs: &nbsp; <span id="productPcs">0</span> <p>
 		  <button type="button" class="btn btn-success" id="plus"> + </button>
 		  <button class="btn btn-danger" id="minus"> - </button>
 	    </div>
 		
-		<div class="col-sm-2">
+		<div class="col-sm-2 col-xs-12">
 	      <p>Total &nbsp; <span id="productTotal">0 </span> UAH <p>
 	    </div>
 		
 	  </div> <!--class="row1">-->
 	  
 	  <div class="row row2">
-	    <div class="col-sm-10"></div>
-		<div class="col-sm-2">
+	    <div class="col-sm-10 col-xs-7"></div>
+		<div class="col-sm-2 col-xs-4">
 		  <!--<button class="btn" id="cancelThis"> Cancel</button>-->
 		  <button class="btn btn-info" id="addToCart"> Add to cart </button>
 		</div>
