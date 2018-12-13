@@ -73,7 +73,8 @@ AppAsset::register($this); // register main Asset
 }
 
 @media screen and (max-width: 992px) {  /* was 600 */
-  .topnav a:not(:first-child) {display: none;}
+  .topnav  a:not(:first-child) {display: none;}
+   .exclude {display: none;} /* hides mine dropdown div */
   .topnav a.icon {
     float: right;
     display: block;
@@ -87,11 +88,19 @@ AppAsset::register($this); // register main Asset
     right: 0;
     top: 0;
   }
-  .topnav.responsive a {
+  .topnav.responsive a  {
     float: none;
     display: block;
     text-align: left;
   }
+     /* mine dropdown div */
+    .topnav.responsive .exclude {  
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive.dropdown-content-my a {display: none;}
+  /* mine dropdown div */
 }
 
 .current-page {background-color:green;}
@@ -161,7 +170,7 @@ AppAsset::register($this); // register main Asset
 			
 			
 			<!---- Creates MY dropdown -->
-			<div class="dropdown-z">
+			<div class="dropdown-z exclude">
 			    <a class="my-drop">Drop <span class="caret"></span></a>
 			    <div class="dropdown-content-my">
                   <a href="#">Link 1</a>
