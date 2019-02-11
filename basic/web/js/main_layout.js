@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 
 
-    // Start PreLoader, shows preloader spinner in views/layouts/main.php---------------
+    // Start PreLoader GIF, shows preloader spinner in views/layouts/main.php---------------
 	// **************************************************************************************
     // **************************************************************************************
     //                                                                                     **

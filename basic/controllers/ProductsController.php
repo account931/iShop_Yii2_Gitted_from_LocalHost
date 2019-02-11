@@ -479,8 +479,8 @@ class ProductsController extends Controller
 	
 	
 	
-	// Gets Ajax data from User check out order(checkout.php) //gets ajax with Orders object, Unique order number, User address, mobile, 
-	//and echo the Php Json data to be dispalyed back in checkout.php with JS
+	// Gets Ajax single product search (from search input in the menu top right). Triggered by search_ajax.js //
+	//echo the Php Json data to be displayed back in search_ajax.js
 
 	// **************************************************************************************
     // **************************************************************************************

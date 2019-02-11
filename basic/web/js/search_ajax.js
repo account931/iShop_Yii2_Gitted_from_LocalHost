@@ -1,16 +1,15 @@
-
-
+//This is used for ajax search for a product(in search input in the menu  top right)
+//Sends ajax to ProductsController->public function actionGet_single_ajax_product()
+//Input itself uses autocomplete.js
 
 $(document).ready(function(){
-	
-	
 	
 	});
 	// END ready----------------------------------------------------------------------------------------------------------
 	
 	
 	
-	// Click Search  button*************
+	// Click Search  button (in search input in the menu  top right)*************
 	$("#searchX button").click(function(){
         send_ajax_for_searched_value($(this));
     });
@@ -21,7 +20,7 @@ $(document).ready(function(){
 	
 	
 
-	// Calculates the Object sum and refresh the Cart Icon. 
+	//Send ajax to ProductsController->public function actionGet_single_ajax_product() to find one single item
 	// **************************************************************************************
     // **************************************************************************************
     //                                                                                     ** 
@@ -67,13 +66,14 @@ $(document).ready(function(){
 	
 	
 	
-		// Calculates the Object sum and refresh the Cart Icon. 
+	// Dispaly one single product from  search input in the menu (top right). NOT 100% FINISHED!!!! SHOW ONLY STATUS FROM ProductsController->public function actionGet_single_ajax_product()
 	// **************************************************************************************
     // **************************************************************************************
     //                                                                                     ** 
 	
 	function build_Single_Product_result(data) 
 	{
+		
 		var resultX = "<p>";
 		resultX = resultX + data.result_status;
 		resultX = resultX + "<br> " + data.search_value + "</p>";

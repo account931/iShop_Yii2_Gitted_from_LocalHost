@@ -18,17 +18,19 @@ $this->params['breadcrumbs'][] = $this->title;
 	
 	
 	
-	<!-- Bootsrap dropdown----->
+	<!---- Bootstrap Collapse for Inner Join ----->
 	<div class="dropdown">
-       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">var_dump(Inner Join) 
+       <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#innerJoin">var_dump(Inner Join) 
        <span class="caret"></span></button>
-       <div class="dropdown-menu">
-  
+	   
+       <div id="innerJoin" class="collapse"><!-- Hidden div which contains collpsed text-->
 	       <?php
-	       var_dump($query);
+		     echo '<pre>'; 
+	         var_dump($query); //inner join Active record from ProductsController
+			 echo '</pre>';
 	       ?>
 	</div></div><br>
-	<!-- END Bootsrap dropdown----->
+	<!---- END Bootstrap Collapse for Inner Join ----->
 	
 	
 	

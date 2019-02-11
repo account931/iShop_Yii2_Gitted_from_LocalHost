@@ -51,8 +51,8 @@ $config = [
             'showScriptName' => false,
             'rules' => [
             ],
-        ],*/
-		
+        ],
+		*/
 		
 		// Working Edited Pretty URL, should add a relavant htaccess file to /web folder-
 		/*
@@ -63,11 +63,14 @@ $config = [
             // Disable r= routes
             'enablePrettyUrl' => true,
             'rules' => array(
+			   '<orders/<q:[a-z-0-9-]+>' => 'orders/index', //stackoverflow
+			   '<action:\w>/<view:\w>' => 'user/<action>',  //stackoverflow
                '<controller:\w+>/<id:\d+>' => '<controller>/view',
                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+			   '<controller:\w+>/<id:\d+>/<title:[^\/]*>/*' => '<controller>/view',  //stackoverflow
            ),
-         ],*/
+         ], */
 		// END Working Edited Pretty URL, should add a relavant htaccess file to /web folder-
         //End Pretty----------------
 		
