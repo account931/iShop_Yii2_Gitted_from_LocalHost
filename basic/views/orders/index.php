@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
+            ['class' => 'yii\grid\SerialColumn'],  //number of column{1,2,3...}
+	        
             'order_id',
             'order_unique_ID',
             'order_user_name',
@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'order_pcs',
             //'order_price',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn', 'template'=>'{view} {update} {delete}'],  //action buttons to show/hide,  "view", "edit", "delete"
         ],
     ]); ?>
 </div>
