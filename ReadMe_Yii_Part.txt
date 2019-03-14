@@ -1,5 +1,5 @@
 This is the most updated version of {iShop_Yii2}.
-It is now updated to github.com automatically with {($ git remote add origin)} to repository {iShop_Yii2_Gitted_from_LocalHost}
+It is now updated to github.com automatically with {($ git remote add origin (sets the repository) + git push origin master )} to repository {iShop_Yii2_Gitted_from_LocalHost}
 Repository {iShop_Yii2} used to be updated manually, but we will no longer update it, all new code changes will go to {https://github.com/account931/iShop_Yii2_Gitted_from_LocalHost}
 ===================================================
 
