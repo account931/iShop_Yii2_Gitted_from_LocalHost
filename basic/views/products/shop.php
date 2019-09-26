@@ -132,7 +132,7 @@ function closeNav() {
   <div class="modal-content">     <!-- modal-content -->
     <div class="modal-header">
       <span class="close">&times;</span>
-      <h2>Product Header</h2>
+      <h2 id="headerName">Product Header</h2>
     </div>
 	
     <div class="modal-body">
@@ -141,7 +141,7 @@ function closeNav() {
 	  <div class="row row1"> <!--Bstrap inj-->  
 	  
         <div class="col-sm-5 col-xs-12"> 
-          <p>Product Name: &nbsp; <span id="productName" class="prName"></span> </p>
+          <p>Product Name:  <span id="productName" class="prName"></span> </p>
           <p>Some other text...</p> <br><br>
            <p><img src="images/cart.png" style="width:10%;"/></p>
           <!--<p>Some other text...</p>	-->	  

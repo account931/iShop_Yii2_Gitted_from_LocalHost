@@ -1,6 +1,12 @@
 //JQ autocomplete UI,(+ must include JQ_UI.js + JQ_UI.css in index.php)
 $(document).ready(function(){
 	
+	//to make this script works only on SiteController/ViewOne
+	if (typeof calenderEvents === 'undefined') { 
+	    //alert ('false');
+		return false;
+	}
+	
 	
 	//gets php object $query(i.e from Product Controller/actionShop), i.e all froducts from shop SQL. Php object is echoed in JSON in Controller Product/action Shop
 	
@@ -14,8 +20,13 @@ $(document).ready(function(){
 	
 	//Loop through passed php object, object is echoed in JSON in Controller Product/action Shop
 	for (var key in calenderEvents) {
-		arrayAutocomplete.push(calenderEvents[key]['pr_name']); //gets name of everty product
+		arrayAutocomplete.push({
+			  label: calenderEvents[key]['pr_name'], 
+		      //value: calenderEvents[key]['pr_name'] //
+		}); //gets name of every product and price
 	}
+	
+	
 	
 	//alert("Autocomplete SQL values -> " + arrayAutocomplete);
 	

@@ -40,6 +40,7 @@ for (var i=0; i < btn.length; i++) {
         modal.style.display = "block";
 		
 		info = idX.split('-'); // split ID to 2 vars [Dnb, 12.55]
+	    $("#headerName").html(info[0]); // html the Header in modal window
 		$("#productName").html(info[0]); // html the product name
 		$("#productPrice").html(info[1] + " UAH");  // html the product price
 		

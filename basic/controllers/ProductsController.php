@@ -165,7 +165,7 @@ class ProductsController extends Controller
 	
 	public function actionShop()
     {
-		 $query=Products::find()->orderBy ('pr_id DESC') /*->andFilterWhere(['like', 'sData_text', Yii::$app->getRequest()->getQueryParam('q')])*/  /*->where(['sData_text'=>Yii::$app->getRequest()->getQueryParam('q') ])*/ ->all();
+		 $query = Products::find()->orderBy ('pr_id DESC') /*->andFilterWhere(['like', 'sData_text', Yii::$app->getRequest()->getQueryParam('q')])*/  /*->where(['sData_text'=>Yii::$app->getRequest()->getQueryParam('q') ])*/ ->all();
 
         return $this->render('shop', [
                'query' => $query, //is in model
@@ -494,7 +494,7 @@ class ProductsController extends Controller
 		 
 		
 		
-	    // check if received Ajax and POST request	from checkout.php
+	    //check if received Ajax and POST request from js/search_ajax.js           //checkout.php
         $dataZ = Yii::$app->request->post();
             if (isset($dataZ)) {
 			
@@ -507,9 +507,12 @@ class ProductsController extends Controller
                 $test = "Ajax failed 100%";
             }
 
-		   // Get variables with data from JS ajax request from js/search_ajax.js
+		   //Get variables with data from JS ajax request from js/search_ajax.js
 		   $searchValue =  Yii::$app->request->post('serverSearchValue'); //test name
 		   
+		   //search the product by $searchValue
+		   $find = Products::find()->orderBy('pr_id DESC') ->where(['pr_name'=>Yii::$app->request->post('serverSearchValue') ]) /*->andFilterWhere(['like', 'sData_text', Yii::$app->getRequest()->getQueryParam('q')])*/  ->one();
+		   //$price = $find->pr_price;
 		   
 		   
 		   
@@ -518,7 +521,8 @@ class ProductsController extends Controller
           return [
              'result_status' => $test, // return ajx status
              'code' => 100,
-		     'search_value' => $searchValue,         // test name 
+		     'search_value' => $searchValue,    // test name from $_POST[]
+			 'productFound' => $find,    // product found by AR, returns object
 			 //'controller' => $controller,   // current controller
 			 //'userformData' => $userName,   // current name
 			 //'userCell' => $userCell,       // cell
